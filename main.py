@@ -7,8 +7,10 @@ wn.bgcolor(userBackgroundColor)      # Set the window background color
 wn.title("Hi, Tess!")         # Set the window title
 
 tess = turtle.Turtle()
+tess.shape("turtle")
 tess.color(userTessColor)            # Tell tess to change her color
-tess.pensize(penWidth)               # Tell tess to set her pen width
+tess.pensize(penWidth)                # Tell tess to set her pen width
+
 
 tess.forward(50)
 tess.left(120)
