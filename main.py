@@ -1,19 +1,26 @@
 import turtle
-userBackgroundColor = input("Enter Tk built in color for background: ")
-userTessColor = input("Enter Tk built in color for Tess: ")
-penWidth = int(input("Enter width of the pen: "))
-wn = turtle.Screen()
-wn.bgcolor(userBackgroundColor)      # Set the window background color
-wn.title("Hi, Tess!")         # Set the window title
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+wn.title("Tess & Alex")
 
-tess = turtle.Turtle()
-tess.shape("turtle")
-tess.color(userTessColor)            # Tell tess to change her color
-tess.pensize(penWidth)                # Tell tess to set her pen width
+tess = turtle.Turtle()      # Create tess and set some attributes
+tess.shape("turtle")        # my modification for turtle shape
+tess.color("hotpink")
+tess.pensize(5)
 
+alex = turtle.Turtle()       # Create alex
+alex.shape("turtle")         # my modification for turtle shape
 
-tess.forward(50)
-tess.left(120)
-tess.forward(50)
+for i in range(3):
+  tess.forward(80)             # Make tess draw equilateral triangle
+  tess.left(120)               # Complete the triangle
+
+tess.right(180)              # Turn tess around
+tess.forward(80)             # Move her away from the origin
+
+for i in range(4):          #make alex draw a square
+    alex.forward(50)
+    alex.left(90)
+
 
 wn.mainloop()
