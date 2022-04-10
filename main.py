@@ -6,19 +6,22 @@ wn.title("Tess & Alex")
 tess = turtle.Turtle()      # Create tess and set some attributes
 tess.shape("turtle")        # my modification for turtle shape
 tess.color("hotpink")
-tess.pensize(5)
 
 alex = turtle.Turtle()       # Create alex
 alex.shape("turtle")         # my modification for turtle shape
 
-for i in range(3):
-  tess.forward(80)             # Make tess draw equilateral triangle
-  tess.left(120)               # Complete the triangle
+tess.penup()                # This is new
+size = 20
+for i in range(30):
+   tess.stamp()             # Leave an impression on the canvas
+   size = size + 3          # Increase the size on every iteration
+   tess.forward(size)       # Move tess along
+   tess.right(24)           #  ...  and turn her
 
-tess.right(180)              # Turn tess around
-tess.forward(80)             # Move her away from the origin
-
-for i in range(4):          #make alex draw a square
+clrs = ["yellow", "red", "purple", "blue"]
+for c in clrs:               #make alex draw square
+    alex.color(c)
+    alex.speed(10)
     alex.forward(50)
     alex.left(90)
 
